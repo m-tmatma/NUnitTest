@@ -39,7 +39,7 @@ namespace NUnitTestTest
         [Test]
         public void TestDevideByZero()
         {
-            Assert.That(() => this.calc.Devide(2, 0), Throws.TypeOf<DivideByZeroException>());
+            Assert.That(() => { this.calc.Devide(2, 0); }, Throws.TypeOf<DivideByZeroException>());
         }
     }
 }
