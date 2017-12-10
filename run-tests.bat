@@ -22,6 +22,8 @@ for /r . %%i in (nunit3-console.exe) do (
 for /r . %%i in (ReportUnit.exe) do (
 	if exist %%i (
 		echo %%i TestResult.xml
-		%%i TestResult.xml TestResult.html
+		%%i . TestResults
+		goto :break_report_unit
 	)
 )
+:break_report_unit
