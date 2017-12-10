@@ -16,8 +16,10 @@ for /r . %%i in (nunit3-console.exe) do (
 	if exist %%i (
 		echo %%i %TESTS%
 		%%i %TESTS%
+		goto :break_nunit3_console
 	)
 )
+:break_nunit3_console
 
 for /r . %%i in (ReportUnit.exe) do (
 	if exist %%i (
